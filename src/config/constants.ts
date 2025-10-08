@@ -1,10 +1,10 @@
 // API Constants
 export const API_CONSTANTS = {
   // Production API URL
-  PRODUCTION_API_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
+  PRODUCTION_API_URL: 'https://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Development API URL
-  DEVELOPMENT_API_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
+  DEVELOPMENT_API_URL: 'https://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Current API URL based on environment
   get CURRENT_API_URL() {

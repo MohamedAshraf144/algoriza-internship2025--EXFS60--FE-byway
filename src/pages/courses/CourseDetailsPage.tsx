@@ -248,7 +248,7 @@ const CourseDetailsPage: React.FC = () => {
             <CardMedia
               component="img"
               height="300"
-              image={course.ImagePath?.startsWith('http') ? course.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
+              image={course.ImagePath?.startsWith('http') ? course.ImagePath : `https://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
               alt={course.Title}
             />
             <Box
@@ -429,7 +429,7 @@ const CourseDetailsPage: React.FC = () => {
                   <CardMedia
                     component="img"
                     height="120"
-                    image={similarCourse.ImagePath?.startsWith('http') ? similarCourse.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${similarCourse.ImagePath}` || '/placeholder-course.jpg'}
+                    image={similarCourse.ImagePath?.startsWith('http') ? similarCourse.ImagePath : `https://mohamedexfs60-001-site1.mtempurl.com${similarCourse.ImagePath}` || '/placeholder-course.jpg'}
                     alt={similarCourse.Title}
                   />
                   <CardContent>

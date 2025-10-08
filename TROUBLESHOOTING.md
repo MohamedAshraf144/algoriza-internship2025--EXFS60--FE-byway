@@ -23,7 +23,7 @@ dotnet run
 #### **2. Backend لا يعمل على SmarterASP.NET:**
 ```bash
 # تحقق من الـ URL:
-http://mohamedexfs60-001-site1.mtempurl.com/api/health
+https://mohamedexfs60-001-site1.mtempurl.com/api/health
 ```
 
 #### **3. مشكلة في الـ CORS:**
@@ -35,13 +35,13 @@ http://mohamedexfs60-001-site1.mtempurl.com/api/health
 #### **الحل الأول: استخدام الـ Backend المحلي**
 ```typescript
 // في src/services/api.ts
-const API_BASE_URL = 'http://localhost:5145/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 #### **الحل الثاني: استخدام الـ Backend على SmarterASP.NET**
 ```typescript
 // في src/services/api.ts
-const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 #### **الحل الثالث: استخدام Configuration مرن**
@@ -50,9 +50,9 @@ const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
 export const ENV = {
   get API_URL() {
     if (process.env.NODE_ENV === 'development') {
-      return 'http://localhost:5145/api';
+      return 'https://mohamedexfs60-001-site1.mtempurl.com/api';
     }
-    return 'http://mohamedexfs60-001-site1.mtempurl.com/api';
+    return 'https://mohamedexfs60-001-site1.mtempurl.com/api';
   }
 };
 ```
@@ -79,8 +79,8 @@ npm start
 #### **3. تحقق من الـ Network:**
 ```bash
 # تحقق من الـ API
-curl http://localhost:5145/api/health
-curl http://mohamedexfs60-001-site1.mtempurl.com/api/health
+curl https://mohamedexfs60-001-site1.mtempurl.com/api/health
+curl https://mohamedexfs60-001-site1.mtempurl.com/api/health
 ```
 
 ### **إعدادات الـ Environment:**
@@ -88,13 +88,13 @@ curl http://mohamedexfs60-001-site1.mtempurl.com/api/health
 #### **Development:**
 ```typescript
 // src/services/api.ts
-const API_BASE_URL = 'http://localhost:5145/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 #### **Production:**
 ```typescript
 // src/services/api.ts
-const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 ### **نصائح إضافية:**

@@ -29,7 +29,7 @@ This directory contains all the API service modules for the Byway Learning Platf
 
 The services are configured to use the deployed backend:
 ```
-http://mohamedexfs60-001-site1.mtempurl.com/api
+https://mohamedexfs60-001-site1.mtempurl.com/api
 ```
 
 ## Usage

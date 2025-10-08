@@ -44,13 +44,13 @@ ngrok http 5145
 ### **Development (Local):**
 ```typescript
 // src/services/api.ts
-const API_BASE_URL = 'http://localhost:5145/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 ### **Production (GitHub Pages):**
 ```typescript
 // src/services/api.ts
-const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 ## 📋 **خطوات الـ Deployment الكاملة**

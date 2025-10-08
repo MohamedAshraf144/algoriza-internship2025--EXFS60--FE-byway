@@ -199,10 +199,10 @@ import { ENDPOINTS } from './config/api';
 #### **3. Environment Variables:**
 ```typescript
 // Production
-REACT_APP_API_BASE_URL=http://mohamedexfs60-001-site1.mtempurl.com/api
+REACT_APP_API_BASE_URL=https://mohamedexfs60-001-site1.mtempurl.com/api
 
 // Development  
-REACT_APP_API_BASE_URL=http://localhost:5145/api
+REACT_APP_API_BASE_URL=https://mohamedexfs60-001-site1.mtempurl.com/api
 ```
 
 ### **🚀 Ready for Deployment:**

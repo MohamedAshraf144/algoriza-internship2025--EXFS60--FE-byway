@@ -145,7 +145,7 @@ const MyCoursesPage: React.FC = () => {
                 <CardMedia
                   component="img"
                   height="200"
-                  image={course.ImagePath?.startsWith('http') ? course.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
+                  image={course.ImagePath?.startsWith('http') ? course.ImagePath : `https://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
                   alt={course.Title}
                   sx={{ objectFit: 'cover' }}
                 />

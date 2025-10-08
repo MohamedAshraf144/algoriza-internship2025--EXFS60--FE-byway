@@ -333,8 +333,8 @@ const AdminCoursesPage: React.FC = () => {
       
       // Make API call with FormData
       const url = editingCourse 
-        ? `http://mohamedexfs60-001-site1.mtempurl.com/api/courses/${editingCourse.Id}`
-        : 'http://mohamedexfs60-001-site1.mtempurl.com/api/courses';
+        ? `https://mohamedexfs60-001-site1.mtempurl.com/api/courses/${editingCourse.Id}`
+        : 'https://mohamedexfs60-001-site1.mtempurl.com/api/courses';
       
       const method = editingCourse ? 'PUT' : 'POST';
 
@@ -686,7 +686,7 @@ const AdminCoursesPage: React.FC = () => {
                   <CardMedia
                     component="img"
                     height="200"
-                    image={course.ImagePath?.startsWith('http') ? course.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
+                    image={course.ImagePath?.startsWith('http') ? course.ImagePath : `https://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
                     alt={course.Title}
                     sx={{ objectFit: 'cover' }}
                   />

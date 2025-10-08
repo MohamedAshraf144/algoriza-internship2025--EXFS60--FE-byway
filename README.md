@@ -6,7 +6,7 @@ A modern, responsive learning management system built with React, TypeScript, an
 [View Live Demo](https://mohamedashraf144.github.io/algoriza-internship2025--EXFS60--FE-byway)
 
 ## 🔗 Backend API
-[Live API](http://mohamedexfs60-001-site1.mtempurl.com)
+[Live API](https://mohamedexfs60-001-site1.mtempurl.com)
 
 ## ✨ Features
 
@@ -101,7 +101,7 @@ npm run deploy
 The application is configured to use the production backend:
 ```typescript
 // src/services/api.ts
-const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
+const API_BASE_URL = 'https://mohamedexfs60-001-site1.mtempurl.com/api';
 ```
 
 ## 📁 Project Structure

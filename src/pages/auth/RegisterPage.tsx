@@ -218,7 +218,7 @@ const RegisterPage: React.FC = () => {
               <Button
                 fullWidth
                 variant="outlined"
-                onClick={() => window.location.href = 'http://mohamedexfs60-001-site1.mtempurl.com/api/auth/google'}
+                onClick={() => window.location.href = 'https://mohamedexfs60-001-site1.mtempurl.com/api/auth/google'}
                 sx={{
                   borderColor: '#e0e0e0',
                   color: '#757575',

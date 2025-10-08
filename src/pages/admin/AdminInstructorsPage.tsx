@@ -227,8 +227,8 @@ const AdminInstructorsPage: React.FC = () => {
       
       // Make API call with FormData
       const url = editingInstructor 
-        ? `http://mohamedexfs60-001-site1.mtempurl.com/api/instructors/${editingInstructor.Id}`
-        : 'http://mohamedexfs60-001-site1.mtempurl.com/api/instructors';
+        ? `https://mohamedexfs60-001-site1.mtempurl.com/api/instructors/${editingInstructor.Id}`
+        : 'https://mohamedexfs60-001-site1.mtempurl.com/api/instructors';
       
       const method = editingInstructor ? 'PUT' : 'POST';
 
@@ -453,7 +453,7 @@ const AdminInstructorsPage: React.FC = () => {
                   <CardMedia
                     component="img"
                     height="200"
-                    image={instructor.ImagePath?.startsWith('http') ? instructor.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${instructor.ImagePath}` || '/placeholder-instructor.jpg'}
+                    image={instructor.ImagePath?.startsWith('http') ? instructor.ImagePath : `https://mohamedexfs60-001-site1.mtempurl.com${instructor.ImagePath}` || '/placeholder-instructor.jpg'}
                     alt={instructor.Name}
                     sx={{ objectFit: 'cover' }}
                   />

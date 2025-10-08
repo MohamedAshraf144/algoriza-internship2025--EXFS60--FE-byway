@@ -1,10 +1,10 @@
 // API Configuration
 export const API_CONFIG = {
   // Production API URL
-  BASE_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
+  BASE_URL: 'https://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Development API URL (for local testing)
-  DEV_BASE_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
+  DEV_BASE_URL: 'https://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Current environment
   IS_PRODUCTION: process.env.NODE_ENV === 'production',

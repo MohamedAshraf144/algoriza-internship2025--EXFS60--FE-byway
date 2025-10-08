@@ -345,7 +345,7 @@ const HomePage: React.FC = () => {
                 <CardMedia
                   component="img"
                         height="220"
-                  image={course.ImagePath?.startsWith('http') ? course.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
+                  image={course.ImagePath?.startsWith('http') ? course.ImagePath : `https://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
                   alt={course.Title}
                         sx={{
                           filter: 'brightness(0.9)',

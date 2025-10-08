@@ -6,6 +6,7 @@ const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
 // Create axios instance
 const api = axios.create({
   baseURL: API_BASE_URL,
+  timeout: 10000, // 10 seconds timeout
   headers: {
     'Content-Type': 'application/json',
   },
@@ -36,6 +37,13 @@ api.interceptors.response.use(
   },
   (error) => {
     console.error('❌ [API] Response error:', error.response?.status, error.config?.url || 'unknown', error.message);
+    
+    // Handle network errors
+    if (error.code === 'ERR_NETWORK') {
+      console.error('🌐 [API] Network Error - Backend may be down or CORS issue');
+      console.error('🌐 [API] Backend URL:', API_BASE_URL);
+    }
+    
     if (error.response?.status === 401) {
       // Token expired or invalid
       localStorage.removeItem('token');

@@ -38,7 +38,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://mohamedexfs60-001-site1.mtempurl.com/",
+  "homepage": "https://mohamedashraf144.github.io/algoriza-internship2025--EXFS60--FE-byway",
   "proxy": "http://localhost:5145",
   "eslintConfig": {
     "extends": [

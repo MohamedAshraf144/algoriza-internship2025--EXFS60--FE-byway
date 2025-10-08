@@ -12,8 +12,8 @@ export const cartService = {
       throw new Error('User not authenticated');
     }
 
-    console.log('🛒 [cartService] Making API call to:', `/Cart`);
-    const response = await api.get<Cart>(`/Cart`);
+    console.log('🛒 [cartService] Making API call to:', `/Cart/${user.Id}`);
+    const response = await api.get<Cart>(`/Cart/${user.Id}`);
     console.log('✅ [cartService] Cart response:', response.data);
     return response.data;
   },
@@ -26,8 +26,8 @@ export const cartService = {
     if (!user) throw new Error('User not authenticated');
 
     try {
-      console.log('🛒 [cartService] Making API call to:', `/Cart/add`);
-      const response = await api.post(`/Cart/add`, { courseId });
+      console.log('🛒 [cartService] Making API call to:', `/Cart/${user.Id}/items`);
+      const response = await api.post(`/Cart/${user.Id}/items`, { courseId });
       console.log('✅ [cartService] Add to cart response:', response.status, response.data);
       return response.status === 200;
     } catch (error) {
@@ -40,7 +40,7 @@ export const cartService = {
     const user = authService.getCurrentUser();
     if (!user) throw new Error('User not authenticated');
 
-    const response = await api.delete(`/Cart/remove/${courseId}`);
+    const response = await api.delete(`/Cart/${user.Id}/items/${courseId}`);
     return response.status === 200;
   },
 
@@ -48,7 +48,7 @@ export const cartService = {
     const user = authService.getCurrentUser();
     if (!user) throw new Error('User not authenticated');
 
-    const response = await api.delete(`/Cart/clear`);
+    const response = await api.delete(`/Cart/${user.Id}`);
     return response.status === 200;
   },
 

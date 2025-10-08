@@ -1,26 +1,33 @@
-// API Configuration with fallback
+// API Configuration for different environments
 export const API_CONFIG = {
-  // Production API URL
-  PRODUCTION: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
-  
-  // Development API URL
+  // Development API URL (localhost)
   DEVELOPMENT: 'http://localhost:5145/api',
   
-  // Fallback API URL (if production fails)
+  // Production API URL (when backend is deployed)
+  PRODUCTION: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
+  
+  // Fallback API URL
   FALLBACK: 'http://localhost:5145/api',
   
-  // Current environment
+  // Get current API URL based on environment
   get CURRENT() {
-    // Check if we're in development mode
-    if (process.env.NODE_ENV === 'development') {
+    // Check if we're running on localhost (development)
+    if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
       return this.DEVELOPMENT;
     }
     
-    // Try production first, fallback to local if needed
-    return this.PRODUCTION;
+    // Check if we're running on GitHub Pages
+    if (typeof window !== 'undefined' && window.location.hostname.includes('github.io')) {
+      // For GitHub Pages, we need the backend to be deployed publicly
+      // For now, return localhost (user needs to run backend locally)
+      return this.DEVELOPMENT;
+    }
+    
+    // Default to development
+    return this.DEVELOPMENT;
   },
   
-  // Test if API is available
+  // Test API connection
   async testConnection(url: string): Promise<boolean> {
     try {
       const controller = new AbortController();
@@ -41,28 +48,29 @@ export const API_CONFIG = {
   
   // Get working API URL
   async getWorkingUrl(): Promise<string> {
-    // Test production first
-    if (await this.testConnection(this.PRODUCTION)) {
-      console.log('✅ Production API is working');
-      return this.PRODUCTION;
-    }
-    
-    // Test development
+    // Test development first
     if (await this.testConnection(this.DEVELOPMENT)) {
       console.log('✅ Development API is working');
       return this.DEVELOPMENT;
     }
     
-    // Fallback to production (will show errors but at least tries)
-    console.warn('⚠️ No API connection available, using production as fallback');
-    return this.PRODUCTION;
+    // Test production
+    if (await this.testConnection(this.PRODUCTION)) {
+      console.log('✅ Production API is working');
+      return this.PRODUCTION;
+    }
+    
+    // Fallback to development
+    console.warn('⚠️ No API connection available, using development as fallback');
+    return this.DEVELOPMENT;
   }
 };
 
 // Environment detection
 export const ENVIRONMENT = {
-  IS_PRODUCTION: process.env.NODE_ENV === 'production',
-  IS_DEVELOPMENT: process.env.NODE_ENV === 'development',
+  IS_LOCALHOST: typeof window !== 'undefined' && window.location.hostname === 'localhost',
+  IS_GITHUB_PAGES: typeof window !== 'undefined' && window.location.hostname.includes('github.io'),
+  IS_PRODUCTION: typeof window !== 'undefined' && !window.location.hostname.includes('localhost'),
   
   // Get current API URL
   get API_URL() {

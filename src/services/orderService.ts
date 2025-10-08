@@ -11,14 +11,14 @@ export const orderService = {
       throw new Error('User not authenticated');
     }
 
-    console.log('🛒 [orderService] Making API call to:', `/orders/user/${user.Id}`);
-    const response = await api.get<Order[]>(`/orders/user/${user.Id}`);
+    console.log('🛒 [orderService] Making API call to:', `/Orders/user/${user.Id}`);
+    const response = await api.get<Order[]>(`/Orders/user/${user.Id}`);
     console.log('✅ [orderService] Orders response:', response.data);
     return response.data;
   },
 
   async getOrderById(orderId: number): Promise<Order> {
-    const response = await api.get<Order>(`/orders/${orderId}`);
+    const response = await api.get<Order>(`/Orders/${orderId}`);
     return response.data;
   },
 
@@ -28,7 +28,7 @@ export const orderService = {
       throw new Error('User not authenticated');
     }
 
-    const response = await api.post<Order>('/orders', {
+    const response = await api.post<Order>('/Orders', {
       userId: user.Id,
       paymentMethod,
       notes

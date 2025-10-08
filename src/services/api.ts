@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// API Base URL - Production backend
+// API Base URL - SmarterASP.NET Production
 const API_BASE_URL = 'http://mohamedexfs60-001-site1.mtempurl.com/api';
 
 // Create axios instance

@@ -228,7 +228,7 @@ const CoursesPage: React.FC = () => {
                       <CardMedia
                         component="img"
                         height="180"
-                        image={course.ImagePath?.startsWith('http') ? course.ImagePath : `http://localhost:5145${course.ImagePath}` || '/placeholder-course.jpg'}
+                        image={course.ImagePath?.startsWith('http') ? course.ImagePath : `http://mohamedexfs60-001-site1.mtempurl.com${course.ImagePath}` || '/placeholder-course.jpg'}
                         alt={course.Title}
                       />
                       <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>

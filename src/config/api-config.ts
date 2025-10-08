@@ -1,13 +1,13 @@
 // API Configuration for different environments
 export const API_CONFIG = {
   // Development API URL (localhost)
-  DEVELOPMENT: 'http://localhost:5145/api',
+  DEVELOPMENT: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Production API URL (when backend is deployed)
   PRODUCTION: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Fallback API URL
-  FALLBACK: 'http://localhost:5145/api',
+  FALLBACK: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Get current API URL based on environment
   get CURRENT() {

@@ -4,7 +4,7 @@ export const API_CONSTANTS = {
   PRODUCTION_API_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Development API URL
-  DEVELOPMENT_API_URL: 'http://localhost:5145/api',
+  DEVELOPMENT_API_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Current API URL based on environment
   get CURRENT_API_URL() {

@@ -4,7 +4,7 @@ export const API_CONFIG = {
   BASE_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Development API URL (for local testing)
-  DEV_BASE_URL: 'http://localhost:5145/api',
+  DEV_BASE_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Current environment
   IS_PRODUCTION: process.env.NODE_ENV === 'production',

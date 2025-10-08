@@ -2,7 +2,7 @@
 export const ENVIRONMENT = {
   // API URLs
   API_BASE_URL: process.env.REACT_APP_API_BASE_URL || 'http://mohamedexfs60-001-site1.mtempurl.com/api',
-  DEV_API_BASE_URL: 'http://localhost:5145/api',
+  DEV_API_BASE_URL: 'http://mohamedexfs60-001-site1.mtempurl.com/api',
   
   // Environment
   NODE_ENV: process.env.NODE_ENV || 'development',
